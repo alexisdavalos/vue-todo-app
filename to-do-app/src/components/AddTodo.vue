@@ -1,12 +1,7 @@
 <template>
   <div class="form-wrapper">
     <form @submit="addTodo">
-      <input
-        type="text"
-        name="title"
-        v-model="title"
-        placeholder="Add Todo.."
-      />
+      <input type="text" name="title" v-model="title" placeholder="Add Todo.." />
       <input type="submit" value="Submit" class="btn" />
     </form>
   </div>
@@ -55,8 +50,12 @@ form {
 
 input[type="text"] {
   flex: 10;
-  padding: 5px;
+  padding: 10px;
   border: none;
+  background: whitesmoke;
+}
+input[type="text"]:focus {
+  outline: none;
 }
 input[type="submit"] {
   flex: 2;
