@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div v-bind:key="todo.id" v-for="todo in todos">
+  <div class="todo-wrapper">
+    <div v-for="todo in todos" v-bind:key="todo.id">
       <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
     </div>
   </div>
@@ -18,4 +18,7 @@ export default {
 </script>
 
 <style scoped>
+.todo-wrapper {
+  width: 100%;
+}
 </style>

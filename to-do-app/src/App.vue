@@ -1,57 +1,37 @@
 <template>
   <div id="app">
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    <Header />
+    <router-view />
   </div>
 </template>
-
 <script>
-// Imports always happen above export and under script tag
-import Todos from "./components/Todos.vue";
-
+import Header from "./components/layout/Header.vue";
 export default {
-  name: "App",
+  name: "app",
   components: {
-    Todos,
-  },
-  data() {
-    return {
-      todos: [
-        {
-          id: 1,
-          title: "Todo One",
-          completed: false,
-        },
-        {
-          id: 2,
-          title: "Todo Two",
-          completed: false,
-        },
-        {
-          id: 3,
-          title: "Todo Three",
-          completed: false,
-        },
-      ],
-    };
-  },
-  methods: {
-    // This method filters the current data object 'todos' and
-    // returns an array with the new set of data
-    deleteTodo(id) {
-      this.todos = this.todos.filter((todo) => todo.id !== id);
-    },
+    Header,
   },
 };
 </script>
-
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  font-family: "Courier New", Courier, monospace;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
