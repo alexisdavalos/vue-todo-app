@@ -1,4 +1,4 @@
-# Simple To Do App
+# Simple To Do App: First Vue.js Project
 
 ```
 This application was built with the Vue.js CLI 
