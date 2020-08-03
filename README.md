@@ -3,7 +3,8 @@
 ```
 This application was built with the Vue.js CLI. 
 It also utilizes a json place holder api to simulate real server requests based on events emitted.
-This is my first Vue.js application, so I kept it really simple. 
+This is my first Vue.js application, so I kept it really simple.
+Utilized vue-router to dynamically render components and axios for mocking API calls.
 ```
 ## API: https://jsonplaceholder.typicode.com/
 
