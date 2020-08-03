@@ -11,7 +11,7 @@
         v-bind:checked="todo.completed"
       />
       {{ todo.title }}
-      <button @click="$emit('del-todo', todo.id)" class="del">x</button>
+      <button @click="$emit('del-todo', todo.id)" class="del"><p>X</p></button>
     </p>
   </div>
 </template>
@@ -36,11 +36,16 @@ export default {
 }
 .todo-item p {
   text-align: left;
+  margin-left: 10px;
 }
 .is-complete {
   text-decoration: line-through;
+  background: #b4e2af94;
 }
 .del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #e64944;
   color: #fff;
   border: none;
@@ -50,6 +55,13 @@ export default {
   cursor: pointer;
   float: right;
   transition: all 0.25s ease-in-out;
+  outline: none;
+}
+.del p {
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 .del:hover {
   background: #942622;
