@@ -3,7 +3,8 @@
 ```
 This application was built with the Vue.js CLI 
 It also utilizes a json place holder api to simulate real server requests based on events emitted
-https://jsonplaceholder.typicode.com/
+
+##API: https://jsonplaceholder.typicode.com/
 ```
 ## Deployed With Netlify:
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b7fa7879-2276-4403-975a-b0c84239702e/deploy-status)](https://app.netlify.com/sites/vue-todo-application/deploys)
