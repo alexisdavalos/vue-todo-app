@@ -11,7 +11,9 @@
         v-bind:checked="todo.completed"
       />
       {{ todo.title }}
-      <button @click="$emit('del-todo', todo.id)" class="del"><p>X</p></button>
+      <button @click="$emit('del-todo', todo.id)" class="del">
+        <p>X</p>
+      </button>
     </p>
   </div>
 </template>
@@ -23,6 +25,7 @@ export default {
   methods: {
     markComplete() {
       this.todo.completed = !this.todo.completed;
+      this.todo.deleted = !this.todo.deleted;
     },
   },
 };
